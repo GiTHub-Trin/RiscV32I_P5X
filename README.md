@@ -1,7 +1,7 @@
 # 5-Stage Pipelined RV32I CPU (Verilog-2001)
 
 Classic IF / ID / EX / MEM / WB pipeline with full forwarding, load-use stall and
-predict-not-taken branches. See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the stage
+predict-not-taken branches. See [`ARCHITECTURE.md`](ARCHITECTURE.md) for the stage
 descriptions, control-signal table and hazard rules.
 
 ```
