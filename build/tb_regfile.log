@@ -1,0 +1,2 @@
+tb_regfile: PASS
+tb/tb_regfile.v:61: $finish called at 380000 (1ps)

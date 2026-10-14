@@ -1,0 +1,4 @@
+VCD info: dumpfile build/tb_riscv_core.vcd opened for output.
+WARNING: tb/tb_riscv_core.v:42: $readmemh(build/random/rand_13.hex): Not enough words in the file for the requested range [0:1023].
+tb_riscv_core: PASS (build/random/rand_13.hex)
+tb/tb_riscv_core.v:62: $finish called at 40026000 (1ps)
