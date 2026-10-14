@@ -36,13 +36,3 @@ make random_test SEEDS=100
 `tb_riscv_core` runs a program on the whole CPU and compares the final register file with
 `tools/rvsim.py`, a separate Python RV32I reference simulator. Random programs use a small register
 pool, loads/stores and forward branches/jumps to stress forwarding, load-use stalls and flushes.
-
-## Running your own program
-
-```
-python3 tools/rvasm.py prog.s -o build/prog.hex
-python3 tools/rvsim.py build/prog.hex -o build/prog.exp
-iverilog -g2005 -I rtl/include -s tb_riscv_core -o build/core.vvp tb/tb_riscv_core.v $(find rtl -name '*.v')
-vvp build/core.vvp +HEX=build/prog.hex +EXP=build/prog.exp +CYCLES=2000
-```
-(end programs with `j .`). For synthesis use `rtl/top/riscv_soc.v` (parameters `IMEM_INIT`/`DMEM_INIT`).
